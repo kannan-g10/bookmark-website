@@ -71,7 +71,6 @@ async function handleDelete(id) {
     const response = await axios.delete(`${API_URL}/${id}`);
     const data = response.data;
     getBookmarks();
-    console.log(data);
   } catch (err) {
     console.log(err);
   }
@@ -86,7 +85,6 @@ async function handleEdit(title, url, id) {
     if (id == -1) {
       const response = await axios.put(`${API_URL}/${id}`, { title, url });
       const data = response.data;
-      console.log(data);
     }
   } catch (err) {
     console.log(err);
