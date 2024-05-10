@@ -11,7 +11,7 @@ form.addEventListener('submit', handleSubmit);
 
 window.onload = getBookmarks();
 
-async function handleSubmit(e) {
+function handleSubmit(e) {
   e.preventDefault();
   const title = document.querySelector('#title').value;
   const url = document.querySelector('#url').value;
@@ -25,25 +25,6 @@ async function handleSubmit(e) {
   getBookmarks();
 
   form.reset();
-}
-
-async function postBookmark(title, url) {
-  try {
-    const response = await axios.post(API_URL, { title, url });
-    getBookmarks();
-  } catch (err) {
-    console.log(err);
-  }
-}
-
-async function getBookmarks() {
-  try {
-    const response = await axios.get(API_URL);
-    const data = response.data;
-    displayBookmarks(data);
-  } catch (err) {
-    console.log(err);
-  }
 }
 
 function displayBookmarks(data) {
@@ -72,6 +53,25 @@ function displayBookmarks(data) {
 
     ul.append(li);
   });
+}
+
+async function postBookmark(title, url) {
+  try {
+    const response = await axios.post(API_URL, { title, url });
+    getBookmarks();
+  } catch (err) {
+    console.log(err);
+  }
+}
+
+async function getBookmarks() {
+  try {
+    const response = await axios.get(API_URL);
+    const data = response.data;
+    displayBookmarks(data);
+  } catch (err) {
+    console.log(err);
+  }
 }
 
 async function deleteBookmarks(id) {
