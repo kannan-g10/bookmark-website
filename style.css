@@ -2,53 +2,76 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: #fff2d7;
 }
 
 h1 {
+  padding: 30px;
+  margin-bottom: 30px;
   text-align: center;
-  margin: 60px;
+  background-color: #ffe0b5;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 form {
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: center;
   gap: 10px;
   margin: 20px;
 }
 
-label,
+label {
+  font-size: 20px;
+}
+
 input {
-  width: 300px;
-}
-
-.all-websites {
-  margin: 4rem 2rem;
-}
-
-li {
-  margin: 20px;
-  list-style: none;
-  display: flex;
-  gap: 20px;
-  font-size: 30px;
-}
-
-span {
-  width: 400px;
+  padding: 5px;
+  border: none;
+  border-bottom: 0.5px solid black;
+  outline: none;
+  font-size: 20px;
 }
 
 button {
-  padding: 5px;
-  width: 5rem;
-  background-color: lightgray;
+  padding: 7px 15px;
+  margin: 10px;
+  width: 100px;
+  background-color: #19376d;
+  color: white;
+  font-weight: bold;
   border: 1px solid black;
-  border-radius: 3px;
-  cursor: pointer;
-  font-weight: 300;
+  border-radius: 2px;
 }
 
-button:hover {
-  background-color: rgb(129, 123, 123);
-  color: whitesmoke;
+#delete {
+  background-color: rgb(240, 67, 4);
+  width: 100px;
+  margin: 2px;
+}
+
+#edit {
+  background-color: #8decb4;
+  color: black;
+  width: 100px;
+  margin: 2px;
+}
+
+h2 {
+  text-align: center;
+  margin: 20px;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+span {
+  display: inline-block;
+  width: 300px;
+  font-size: 25px;
+  font-style: italic;
 }
