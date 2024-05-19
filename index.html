@@ -8,19 +8,17 @@
   </head>
   <body>
     <h1>Bookmark Website</h1>
-    <div>
-      <form>
-        <div>
-          <label for="title">Website Title : </label>
-          <input type="text" id="title" required autocomplete="off" />
-        </div>
-        <div>
-          <label for="title">Website URL : </label>
-          <input type="text" id="url" required autocomplete="off" />
-        </div>
-        <button type="submit">Add</button>
-      </form>
-    </div>
+    <form>
+      <div class="user-input">
+        <label for="title">Website Title : </label>
+        <input type="text" id="title" required autocomplete="off" />
+      </div>
+      <div class="user-input">
+        <label for="title">Website URL : </label>
+        <input type="text" id="url" required autocomplete="off" />
+      </div>
+      <button type="submit" class="submit">Add</button>
+    </form>
     <div class="all-websites">
       <h2>All Bookmarks</h2>
       <ul></ul>
